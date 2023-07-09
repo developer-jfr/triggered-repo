@@ -8,3 +8,8 @@ steps:
   commands:
   - npm install
   - npm test
+- name: test
+  image: node
+  commands:
+  - npm install
+  - npm test
