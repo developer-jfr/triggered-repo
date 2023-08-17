@@ -5,6 +5,7 @@ name: triggered-drone
 trigger:
   event:
     - pull_request
+    - manual
 
 concurrency:
   limit: 1
