@@ -6,6 +6,9 @@ trigger:
   event:
     - pull_request
 
+concurrency:
+  limit: 1
+
 steps:
 - name: test
   image: node
