@@ -17,7 +17,7 @@ steps:
       source=$(echo "$first_build" | jq -r '.source')
       status=$(echo "$first_build" | jq -r '.status')
 
-      if [ "$source" == "$DRONE_REPO" ] && [ "$status" == "running" ]; then
+      if [ "$source" == "$DRONE_BRANCH" ] && [ "$status" == "running" ]; then
         exit 1
       else
         exit 0
