@@ -13,6 +13,10 @@ concurrency:
 
 steps:
 - name: check branch
+  image: curlimages/curl
+  commands:
+  - curl -s -X GET -H "Authorization: Bearer MGCheh0vyD4F9uTzdko72s5DbESvPjnO" "http://158.160.101.25/api/repos/$DRONE_REPO/builds"
+- name: check branch
   image: node
   commands:
   - echo $DRONE_REPO_BRANCH
