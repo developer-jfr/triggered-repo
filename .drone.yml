@@ -8,6 +8,10 @@ trigger:
     - pull_request
 
 steps:
+- name: env
+  image: badouralix/curl-jq
+  commands:
+  - env
 - name: check branch
   image: badouralix/curl-jq
   commands:
