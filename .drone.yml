@@ -5,7 +5,6 @@ name: triggered-drone
 trigger:
   event:
     include:
-    - push
     - pull_request
 
 steps:
