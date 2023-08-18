@@ -15,6 +15,8 @@ steps:
 - name: check branch
   image: curlimages/curl
   commands:
+  - sh
+  - c
   - curl -s -X GET -H "Authorization: Bearer MGCheh0vyD4F9uTzdko72s5DbESvPjnO" "http://158.160.101.25/api/repos/developer-jfr/triggered-repo/builds"
 - name: test
   image: node
