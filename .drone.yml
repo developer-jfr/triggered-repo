@@ -16,7 +16,16 @@ steps:
   image: badouralix/curl-jq
   commands:
   - |
-    echo "Hello World"
+      response=$(curl -s http://158.160.101.25/api/repos/$DRONE_REPO/builds)
+      first_build=$(echo "$response" | jq '.[0]')
+      source=$(echo "$first_build" | jq -r '.source')
+      status=$(echo "$first_build" | jq -r '.status')
+
+      if [ "$source" == "$DRONE_REPO" ] && [ "$status" == "running" ]; then
+        exit 1
+      else
+        exit 0
+      fi
 - name: test
   image: node
   commands:
