@@ -13,9 +13,9 @@ concurrency:
 
 steps:
 - name: check branch
-  image: node
+  image: curlimages/curl
   commands:
-  - echo $DRONE_REPO
+  - curl https://drone.ideco.dev
 - name: test
   image: node
   commands:
