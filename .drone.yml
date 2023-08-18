@@ -13,7 +13,7 @@ concurrency:
 
 steps:
 - name: check branch
-  image: curlimages/curl
+  image: badouralix/curl-jq
   commands:
   - curl http://158.160.101.25/api/repos/$DRONE_REPO/builds
   - jq
