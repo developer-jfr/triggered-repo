@@ -15,7 +15,7 @@ steps:
 - name: check branch
   image: curlimages/curl
   commands:
-  - curl http://158.160.101.25/api/repos/$DRONE_REPO/builds > end.json
+  - sudo curl http://158.160.101.25/api/repos/$DRONE_REPO/builds > end.json
   - cat end.json 
 - name: test
   image: node
