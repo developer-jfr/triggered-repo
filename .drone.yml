@@ -8,9 +8,6 @@ trigger:
     - push
     - pull_request
 
-concurrency:
-  limit: 1
-
 steps:
 - name: check branch
   image: badouralix/curl-jq
