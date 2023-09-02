@@ -10,7 +10,7 @@ trigger:
 
 steps:
 - name: env
-  image: frdevelopergen/check-branch:1
+  image: frdevelopergen/check-branch:2
   commands:
   - env
 - name: test
