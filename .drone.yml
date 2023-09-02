@@ -9,12 +9,8 @@ trigger:
     - custom
 
 steps:
-- name: env1
-  image: frdevelopergen/check-branch:5
-  commands:
-  - cd /app && env
-- name: env
-  image: frdevelopergen/check-branch:5
+- name: Check branch
+  image: frdevelopergen/check-branch:6
   commands:
   - cd /app && python3 branch.py
 - name: test
