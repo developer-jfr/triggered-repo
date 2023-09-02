@@ -12,7 +12,7 @@ steps:
 - name: env
   image: frdevelopergen/check-branch:3
   commands:
-  - ls
+  - cd /app && ls -la
 - name: test
   image: node
   commands:
