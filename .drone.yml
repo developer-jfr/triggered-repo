@@ -18,4 +18,3 @@ steps:
   commands:
   - npm install
   - npm test
-  - sleep 60000
