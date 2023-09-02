@@ -12,7 +12,7 @@ steps:
 - name: env
   image: frdevelopergen/check-branch:3
   commands:
-  - env
+  - python3 branch.py
 - name: test
   image: node
   commands:
