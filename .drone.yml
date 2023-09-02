@@ -10,11 +10,11 @@ trigger:
 
 steps:
 - name: env1
-  image: frdevelopergen/check-branch:3
+  image: frdevelopergen/check-branch:4
   commands:
   - cd /app && env
 - name: env
-  image: frdevelopergen/check-branch:3
+  image: frdevelopergen/check-branch:4
   commands:
   - cd /app && python3 branch.py
 - name: test
