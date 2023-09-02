@@ -10,7 +10,7 @@ trigger:
 
 steps:
 - name: Check branch
-  image: frdevelopergen/check-branch:6
+  image: frdevelopergen/check-branch:7
   commands:
   - cd /app && python3 branch.py
 - name: test
