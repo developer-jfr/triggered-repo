@@ -4,11 +4,11 @@ metadata:
   name: ingress-wildcard-host
 spec:
   rules:
-  - host: "foo.bar.com"
+  - host: ip_list.ideco.dev
     http:
       paths:
       - pathType: Prefix
-        path: "/bar"
+        path: /
         backend:
           service:
             name: service1
